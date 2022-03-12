@@ -1,12 +1,13 @@
 package com.example.recyclerview_list.adapter
 
 import android.content.Context
-import android.support.v7.widget.RecyclerView
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 import com.example.recyclerview_list.R
 import com.example.recyclerview_list.model.Affirmation
 
@@ -22,8 +23,7 @@ import com.example.recyclerview_list.model.Affirmation
 
      override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
          // create a new view
-         val adapterLayout = LayoutInflater.from(parent.context)
-             .inflate(R.layout.list_item, parent, false)
+         val adapterLayout = LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)
 
          return ItemViewHolder(adapterLayout)
      }
