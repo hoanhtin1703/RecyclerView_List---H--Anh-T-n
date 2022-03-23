@@ -19,6 +19,9 @@ import com.example.recyclerview_list.model.Affirmation
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         val textView: TextView = view.findViewById(R.id.id_textview)
         val imageView: ImageView = view.findViewById(R.id.item_image)
+        val textView1: TextView = view.findViewById(R.id.id_textview1)
+        val textView2: TextView = view.findViewById(R.id.tv_number)
+
     }
 
      override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
@@ -36,6 +39,11 @@ import com.example.recyclerview_list.model.Affirmation
          val item = dataset[position]
          holder.textView.text = context.resources.getString(item.stringResourceId)
          holder.imageView.setImageResource(item.imageResourceId)
+         holder.textView1.text = context.resources.getString(item.MessageResourceId)
+         holder.textView2.text = context.resources.getString(item.NumberResourceId)
+
+
+
      }
  }
 
